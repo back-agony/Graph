@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NqO-dP-vjr">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="r14-AA-HVA">
+            <objects>
+                <navigationController id="NqO-dP-vjr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jwx-IS-nsz">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qjQ-g8-Aak" kind="relationship" relationship="rootViewController" id="3Kr-CL-2UP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPF-et-HkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-708" y="231"/>
+        </scene>
+        <!--Главная-->
+        <scene sceneID="XhR-mO-pQ1">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" title="Главная" id="qjQ-g8-Aak" customClass="StartViewController" customModule="Graph" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rlJ-lk-1hG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите число" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jy0-sv-uGr">
+                                <rect key="frame" x="112.66666666666669" y="378" width="150" height="35"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1Ht-j3-Lkw"/>
+                                    <constraint firstAttribute="height" constant="35" id="vXv-4u-xjs"/>
+                                </constraints>
+                                <color key="textColor" red="0.1333333333" green="0.13725490200000001" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDv-9M-lhU">
+                                <rect key="frame" x="112.66666666666669" y="453" width="150" height="34"/>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.13725490196078433" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="YWV-29-2DA"/>
+                                    <constraint firstAttribute="height" constant="34" id="teA-nF-JrO"/>
+                                </constraints>
+                                <state key="normal" title="Поехали">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.27450980390000002" green="0.25490196079999999" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="randomAction:" destination="qjQ-g8-Aak" eventType="touchUpInside" id="0YI-0C-RUg"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-fo-tJI">
+                                <rect key="frame" x="177.66666666666666" y="423" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="HDv-9M-lhU" firstAttribute="top" secondItem="zhn-gB-Pax" secondAttribute="centerY" constant="20" id="7Ff-Le-NgO"/>
+                            <constraint firstItem="2dO-fo-tJI" firstAttribute="centerX" secondItem="zhn-gB-Pax" secondAttribute="centerX" id="FMn-AN-Qml"/>
+                            <constraint firstItem="jy0-sv-uGr" firstAttribute="centerX" secondItem="zhn-gB-Pax" secondAttribute="centerX" id="MrF-fc-atb"/>
+                            <constraint firstItem="2dO-fo-tJI" firstAttribute="centerY" secondItem="zhn-gB-Pax" secondAttribute="centerY" id="gns-d9-Pqe"/>
+                            <constraint firstItem="HDv-9M-lhU" firstAttribute="centerX" secondItem="zhn-gB-Pax" secondAttribute="centerX" id="m20-8d-y85"/>
+                            <constraint firstItem="jy0-sv-uGr" firstAttribute="bottom" secondItem="zhn-gB-Pax" secondAttribute="centerY" constant="-20" id="p4T-Sa-efa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zhn-gB-Pax"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7fM-fl-L8n" appends="YES" id="VqV-Vl-CcT"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Главная" id="sUN-Sn-pGb"/>
+                    <connections>
+                        <outlet property="activity" destination="2dO-fo-tJI" id="gw8-4n-I34"/>
+                        <outlet property="button" destination="HDv-9M-lhU" id="ARW-na-FUp"/>
+                        <outlet property="textField" destination="jy0-sv-uGr" id="sTj-N0-FpV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ah2-8u-4Zk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7fM-fl-L8n">
+                    <connections>
+                        <action selector="tapAction:" destination="qjQ-g8-Aak" id="mML-na-CCG"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="240.80000000000001" y="230.73463268365819"/>
+        </scene>
+    </scenes>
+</document>

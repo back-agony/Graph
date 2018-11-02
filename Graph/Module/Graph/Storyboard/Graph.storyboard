@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qjQ-g8-Aak">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--График-->
+        <scene sceneID="XhR-mO-pQ1">
+            <objects>
+                <viewController storyboardIdentifier="GraphViewController" title="График" id="qjQ-g8-Aak" customClass="GraphViewController" customModule="Graph" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rlJ-lk-1hG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-yC-nD8" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="44" width="375" height="357"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UrD-yC-nD8" firstAttribute="centerX" secondItem="zhn-gB-Pax" secondAttribute="centerX" id="Eit-Al-hQN"/>
+                            <constraint firstItem="UrD-yC-nD8" firstAttribute="width" secondItem="rlJ-lk-1hG" secondAttribute="width" id="MPc-H2-Nmz"/>
+                            <constraint firstItem="UrD-yC-nD8" firstAttribute="bottom" secondItem="zhn-gB-Pax" secondAttribute="centerY" constant="-10" id="Pyp-xR-5Tg"/>
+                            <constraint firstItem="UrD-yC-nD8" firstAttribute="top" secondItem="zhn-gB-Pax" secondAttribute="top" id="cqH-1Q-HEf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zhn-gB-Pax"/>
+                    </view>
+                    <connections>
+                        <outlet property="LineChartView" destination="UrD-yC-nD8" id="Ool-Xo-S01"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ah2-8u-4Zk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.80000000000001" y="230.73463268365819"/>
+        </scene>
+    </scenes>
+</document>
